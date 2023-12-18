@@ -1,7 +1,10 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteContact, getContacts } from '../../redux/myContactsSlice';
+
 import { getFilter } from '../../redux/myFilterSlice';
 import { Li, Button } from './Contact.styled';
+import { getContacts } from '../../redux/contacts/selectors'; // Adjust based on your project structure
+
+import { deleteContact } from 'service/api';
 
 export const Contact = () => {
   const contacts = useSelector(getContacts);
@@ -17,12 +20,14 @@ export const Contact = () => {
       contact.name.toLowerCase().includes(normalizeFilter)
     );
   };
+
   const filterName = visibleContacts();
+
   return (
     <ul>
       {filterName.map((contact, id) => (
         <Li key={id}>
-          {contact.name}: {formatNumber(contact.number)}{' '}
+          {contact.name}: {formatNumber(contact.phone)}{' '}
           <Button
             type="button"
             onClick={() => dispatch(deleteContact(contact.id))}

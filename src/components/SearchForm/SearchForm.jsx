@@ -1,8 +1,9 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
-import { addContact, getContacts } from '../../redux/myContactsSlice';
 import { Button, Form, Input, Label } from './SearchForm.styled';
+import { getContacts } from '../../redux/contacts/selectors';
+import { addContact } from 'service/api';
 
 export const SearchForm = () => {
   const contacts = useSelector(getContacts);
@@ -25,6 +26,7 @@ export const SearchForm = () => {
         number,
       };
       dispatch(addContact(newContact));
+
       form.reset();
     }
   };

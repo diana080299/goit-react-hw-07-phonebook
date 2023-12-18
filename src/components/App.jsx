@@ -1,11 +1,11 @@
-import { ContactList } from './ContactList/ContactList';
+import ContactList from './ContactList/ContactList';
 import { Filter } from './Filter/Filter';
 import { SearchForm } from './SearchForm/SearchForm';
 
 export const App = () => {
   return (
     <div
-      tyle={{
+      style={{
         display: 'flex',
         gap: '40px',
         flexDirection: 'column',
