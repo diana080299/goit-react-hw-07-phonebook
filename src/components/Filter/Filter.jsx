@@ -4,6 +4,7 @@ import { Box, Input } from '@chakra-ui/react';
 
 export const Filter = props => {
   const dispatch = useDispatch();
+
   const handleFilter = event => {
     const filter = event.currentTarget.value;
     dispatch(searchFilter(filter));

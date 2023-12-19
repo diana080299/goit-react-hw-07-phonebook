@@ -5,9 +5,7 @@ axios.defaults.baseURL =
 
 export const getContacts = async () => {
   try {
-    console.log('Fetching contacts...');
     const response = await axios.get('contacts');
-    console.log('API Response:', response.data);
     return response.data;
   } catch (error) {
     console.error('API Error:', error);

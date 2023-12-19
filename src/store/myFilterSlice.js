@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+
 export const myFilterSlice = createSlice({
   name: 'filterSearch',
   initialState: { filter: '' },

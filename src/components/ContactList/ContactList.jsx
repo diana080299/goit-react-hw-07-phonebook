@@ -9,9 +9,11 @@ import ClipLoader from 'react-spinners/ClipLoader';
 export const ContactList = () => {
   const loading = useSelector(isLoading);
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(fetchContact());
   }, [dispatch]);
+
   return (
     <Box
       style={{

@@ -1,5 +1,6 @@
 import * as ContactService from 'service/api';
 import { createAsyncThunk } from '@reduxjs/toolkit';
+
 export const fetchContact = createAsyncThunk(
   'contacts/allContacts',
   async (_, thunkAPI) => {
@@ -11,6 +12,7 @@ export const fetchContact = createAsyncThunk(
     }
   }
 );
+
 export const postContacts = createAsyncThunk(
   'contacts/postContact',
   async newContact => {
@@ -20,6 +22,7 @@ export const postContacts = createAsyncThunk(
     } catch (error) {}
   }
 );
+
 export const deleteContact = createAsyncThunk(
   'contacts/deleteContact',
   async id => {

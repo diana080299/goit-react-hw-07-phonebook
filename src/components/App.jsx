@@ -13,6 +13,7 @@ export const App = () => {
       },
     },
   });
+
   return (
     <>
       <ChakraProvider theme={theme}>

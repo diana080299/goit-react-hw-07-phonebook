@@ -1,7 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
-// import { Button, Label } from './SearchForm.styled';
 import { selectContacts } from '../../store/contacts/selectors';
 import { postContacts } from 'store/contacts/operations';
 import {
@@ -14,8 +13,6 @@ import {
 } from '@chakra-ui/react';
 import { PhoneIcon } from '@chakra-ui/icons';
 import { FiUser } from 'react-icons/fi';
-
-// ... (import statements remain unchanged)
 
 export const SearchForm = () => {
   const contacts = useSelector(selectContacts);
