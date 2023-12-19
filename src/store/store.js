@@ -17,21 +17,22 @@ import { myFilterSlice } from './myFilterSlice';
 export const store = configureStore({
   reducer: {
     contacts: contactsReducer,
-    filter: myFilterSlice,
+    filter: myFilterSlice.reducer,
   },
-
-  // reducer: {
-  //   user: persistedReducer,
-  //   myFilter: myFilterSlice.reducer,
-  // },
-  // middleware: getDefaultMiddleware => [
-  //   ...getDefaultMiddleware({
-  //     serializableCheck: {
-  //       ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-  //     },
-  //   }),
-  //   logger,
-  // ],
 });
+
+// reducer: {
+//   user: persistedReducer,
+//   myFilter: myFilterSlice.reducer,
+// },
+// middleware: getDefaultMiddleware => [
+//   ...getDefaultMiddleware({
+//     serializableCheck: {
+//       ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+//     },
+//   }),
+//   logger,
+// ],
+// });
 
 // export const persistor = persistStore(store);
